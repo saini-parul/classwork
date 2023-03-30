@@ -26,6 +26,6 @@ console.log("\nIterating JSON using 'for-Each' loop.")
 obj.forEach(o => console.log(o));
 
 console.log("\n\nQuestion 2.\n Create your owne resume Data in JSON format.\n");
-var resume=[{"Name":"Parul Saini"},{"Qualification":"Graduation (Btech-ECE)"},{"Technical Knowledge": "Full Stack Development"},{"Current Job": "HCL as Analyst"}];
+var resume=[{"Name":"Parul Saini"},{"Qualification":"Graduation (Btech-ECE)"},{"Technical Knowledge": "Full Stack Development"},{"Current Job": "HCL"}];
 resume.forEach(o => console.log(o));
 
