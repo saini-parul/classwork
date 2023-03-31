@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Task</title>
+</head>
+<body>
+    <script>
+       console.log("Question 1.\n How to comapre two JSON have the same properties without order.\n");
+
+myObj1 = { name:"Person 1",age:"5" }; 
+	myObj2 = { age:"5",name:"Person 1" }; 
+	 
+	// find keys 
+	keyObj1 = Object.keys(myObj1); 
+	keyObj2 = Object.keys(myObj2); 
+		 
+	// find values 
+	valueObj1 = Object.values(myObj1); 
+	valueObj2 = Object.values(myObj2); 
+	 
+	// find max length to iterate	 
+	if(keyObj1.length > keyObj2.length) { 
+		var biggestKey = keyObj1.length; 
+	} else { 
+		var biggestKey = keyObj2.length; 
+	} 
+	 
+	// now compare their keys and values  
+	for(var i=0; i<biggestKey; i++) { 
+		
+			console.log('myObj1 key: '+ keyObj1[i] + '\nmyObj2 key: '+ keyObj2[i] +'\n');
+            console.log('myObj1 value: '+ valueObj1[i] + '\nmyObj2 value: '+ valueObj2[i] +'\n'); 
+		    
+          } 
+	
+
+console.log("\n\nQuestion 2.\n Use the rest countries API url:https://restcountries.com/v3.1/all and display all the country flags in the console .\n");
+
+let fetchRes= fetch("https://restcountries.com/v3.1/all")
+fetchRes.then((res)=> res.json()).then((d)=>{
+	d.map((item)=>{
+		console.log(item.flags.png)
+	}) 	
+});
+
+console.log("\n\nQuestion 3 .\n Use the same rest countries and print all countries names, regions, sub region and populations.\n");
+let fetchResa= fetch("https://restcountries.com/v3.1/all")
+fetchResa.then((res)=> res.json()).then((d)=>{
+	d.map((item)=>{
+		console.log(item.name.official,item.region,item.subregion,item.population)
+	}) 	
+});
+ 
+    </script>
+</body>
+</html>
